@@ -1,0 +1,29 @@
+<h1>
+  {{title}}
+</h1>
+<table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="noOfRowsToDisplay">
+  <thead>
+  <tr>
+    <th style="width: 5%">
+      <mfDefaultSorter by="userId">User Id</mfDefaultSorter>
+    </th>
+    <th style="width: 2%">
+      <mfDefaultSorter by="id">Id</mfDefaultSorter>
+    </th>
+    <th style="width: 23%">
+      <mfDefaultSorter by="title">Title</mfDefaultSorter>
+    </th>
+    <th style="width: 70%">
+      <mfDefaultSorter by="body">Body</mfDefaultSorter>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of mf.data">
+    <td>{{item.userId}}</td>
+    <td>{{item.id}}</td>
+    <td>{{item.title}}</td>
+    <td>{{item.body}}</td>
+  </tr>
+  </tbody>
+</table>

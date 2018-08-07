@@ -1,0 +1,12 @@
+<h1>{{msg}}</h1>
+
+<div *ngIf="teamDetail">
+  Displaying {{teamDetail.name}} team info. <br />
+  <div *ngFor="let team of teamDetail.teamDetail; let i=index" class="col-xs-6">
+    <!--<span  [style.color]="isSpecial ? 'red': 'green'"></span>-->
+    <span [style.color]="team.gender == 'F' ? 'pink' : 'green'" (click)="passTeamMemberName(team.name)">
+        {{team.name}}
+      </span>
+    <br />
+  </div>
+</div>

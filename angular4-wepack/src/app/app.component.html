@@ -1,0 +1,27 @@
+<header>
+  <nav>
+    <a [routerLink]="['']">Home</a>
+    <a [routerLink]="['about']">About</a>
+    <a [routerLink]="['dap-team']">Dap Team</a>
+  </nav>
+</header>
+<main>
+  <h1>Hello from {{title | uppercase }}!</h1>
+
+  <!--<input [(ngModel)]="title" /><br />-->
+  <!--<input [value]="title" (blur)="title = $event.target.value"><br />-->
+  <!--<button (click)="toggle()" >Toggle</button>-->
+  <!--&lt;!&ndash;- One way binding -&ndash;&gt;-->
+  <!--<div [style.display]="displayDiv2">-->
+    <!--<img [src]="imgUrl">-->
+  <!--</div>-->
+  <!--<div *ngIf="displayDiv1">-->
+    <!--<img src="{{imgUrl}}">1-->
+  <!--</div>-->
+  <!--<img bind-src="imgUrl">-->
+
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <a [href]="url">Webpack Angular 2 Starter</a>
+</footer>

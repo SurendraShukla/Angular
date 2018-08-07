@@ -1,0 +1,9 @@
+<ul>
+  <ol *ngFor="let dapTeam of dapTeamDetail; let i=index" (click)="setSelectedIndex(i)">
+    {{dapTeam.name}} ({{dapTeam.teamDetail.length}})
+  </ol>
+</ul>
+{{localVar.printSomething('Using local variable')}}-{{localVar.msg}}
+<br />
+
+<my-team-member [teamDetail]="dapTeamDetail[selectedIndex]" [msg]="'Surendra'" (customEvent)="printTeamMemberName($event)" #localVar></my-team-member>

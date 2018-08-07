@@ -1,0 +1,8 @@
+<div class="column">
+  <div>
+    <button (click)="addQuote()"> Add Quote </button>
+  </div>
+  <div *ngFor="let quote of qlist; let i=index" class="row">
+    {{i}}. {{quote}}
+  </div>
+</div>

@@ -34,6 +34,7 @@ Option 2: Config files
   "src/app/**/*.ts": [
     "tslint -c tslint.json --fix",
     "prettier --write"
+  ]
 }
 
 // .huskyrc.json

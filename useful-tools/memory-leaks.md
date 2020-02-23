@@ -6,11 +6,6 @@ Observables created by @ngrx/Store do not complete when your component gets unmo
 
 If you don't unsubscribe from `this.store.select(...).subscribe(...)` subscriptions, you introduce memory leaks each time the component gets destroyed.
 
-### How big is the problem?
-
-> Uhh...
->
-> ![List of leaks](images/leaks.gif)
 
 ### Implications:
 

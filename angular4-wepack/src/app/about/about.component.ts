@@ -9,7 +9,7 @@ import { ApiService } from '../shared/api.service';
 export class AboutComponent implements OnInit {
 
   private _userAgent: any;
-  
+
   get userAgent(): any {
     return this._userAgent;
   }

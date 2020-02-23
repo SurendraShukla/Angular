@@ -24,6 +24,14 @@
     "start:hmr": "npm run server -- --hot",
     "postinstall": "npm run webdriver-update"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/app/**/*.ts": "tslint -c tslint.json --fix"
+  },
   "dependencies": {
     "@angular/common": "4.0.0",
     "@angular/compiler": "4.0.0",
@@ -54,6 +62,7 @@
     "file-loader": "^0.10.0",
     "html-loader": "^0.4.0",
     "html-webpack-plugin": "^2.8.1",
+    "husky": "^4.2.3",
     "istanbul-instrumenter-loader": "^0.2.0",
     "jasmine-core": "^2.3.4",
     "jasmine-spec-reporter": "^3.2.0",
@@ -66,6 +75,7 @@
     "karma-remap-istanbul": "0.2.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "2.0.2",
+    "lint-staged": "^10.0.7",
     "node-sass": "^4.5.0",
     "null-loader": "0.1.1",
     "postcss-loader": "^1.1.0",
